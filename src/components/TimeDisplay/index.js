@@ -6,20 +6,33 @@ import './style.css';
 
 function TimeDisplay() {
 
-    const [time, setTime] = useState(null);
+    const [time, setTime] = useState({
+        hour: null,
+        minute: null,
+        second: null
+    });
 
-    const currentTime = new Date().toLocaleString()
+    const date = new Date()
+    const currentHour = date.getHours();
+    const currentMinute = date.getMinutes();
+    const currentSecond = date.getSeconds();
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setTime(time => currentTime);
+            const newTime = {
+            hour: currentHour,
+            minute: currentMinute,
+            second: currentSecond
+        }
+            setTime(time => newTime);
+            console.log(newTime)
         }, 1000);
         return () => clearInterval(interval);
       },
       );
 
     return (
-        <p className="Clock">Date: {time}</p>
+        <p className="Clock">{time.hour}:{time.minute}</p>
     );
 }
 
