@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import Moment from 'react-moment';
-import 'moment-timezone';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import './style.css';
 
@@ -14,25 +13,40 @@ function TimeDisplay() {
 
     const date = new Date()
     const currentHour = date.getHours();
-    const currentMinute = date.getMinutes();
-    const currentSecond = date.getSeconds();
+    let currentMinute = date.getMinutes();
+    let currentSecond = date.getSeconds();
+
+    if (currentMinute < 10) {
+        currentMinute = "0" + currentMinute.toString()
+    }
+    if (currentSecond < 10) {
+        currentSecond = "0" + currentSecond.toString()
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
+
             const newTime = {
-            hour: currentHour,
-            minute: currentMinute,
-            second: currentSecond
-        }
+                hour: currentHour,
+                minute: currentMinute,
+                second: currentSecond
+            }
             setTime(time => newTime);
-            console.log(newTime)
         }, 1000);
         return () => clearInterval(interval);
-      },
-      );
+    },
+    );
 
     return (
-        <p className="Clock">{time.hour}:{time.minute}</p>
+        <div>
+            <Container>
+                <Row>
+                    <Container className="Clock">
+                        <Col className="Hour">{time.hour}:{time.minute}<span className="Second">.{time.second}</span></Col>
+                    </Container>
+                </Row>
+            </Container>
+        </div>
     );
 }
 
