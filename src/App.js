@@ -1,10 +1,12 @@
+import Greeting from "./components/Greeting"
 import TimeDisplay from "./components/TimeDisplay"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <TimeDisplay></TimeDisplay>
+      <Greeting />
+      <TimeDisplay />
     </div>
   );
 }
