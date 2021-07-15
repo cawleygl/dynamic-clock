@@ -38,7 +38,6 @@ function TimeDisplay() {
     );
 
     return (
-        <div>
             <Container>
                 <Row>
                     <Container className="Clock">
@@ -46,7 +45,6 @@ function TimeDisplay() {
                     </Container>
                 </Row>
             </Container>
-        </div>
     );
 }
 

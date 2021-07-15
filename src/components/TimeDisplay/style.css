@@ -1,6 +1,5 @@
 .Clock {
     font-family: 'Montserrat', sans-serif;
-    color: black(0, 0, 92);
     text-align: center;
 }
 .Hour {
@@ -9,5 +8,4 @@
 .Second {
     font-size: 40px;
     padding-top: 45px;
-    font-family: 'Montserrat', sans-serif;
 }
