@@ -49,7 +49,7 @@ function TimeDisplay() {
             <Container>
                 <Row>
                     <Container className="Clock">
-                        <Greeting time={time.tod} />
+                        <Greeting tod={time.tod} hour={time.hour} />
                         <Col className="Hour">{time.hour}:{time.minute}<span className="Second">.{time.second}</span><span className="TOD"> {time.tod}</span></Col>
                     </Container>
                 </Row>

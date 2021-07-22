@@ -1,4 +1,3 @@
-import Greeting from "./components/Greeting"
 import TimeDisplay from "./components/TimeDisplay"
 import './App.css';
 
