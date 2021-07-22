@@ -1,11 +1,14 @@
 .Clock {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     text-align: center;
 }
 .Hour {
-    font-size: 80px;
+    font-size: 100px;
 }
 .Second {
     font-size: 40px;
     padding-top: 45px;
+}
+.TOD {
+    font-family: 'Caveat', cursive;
 }
