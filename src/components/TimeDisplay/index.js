@@ -7,10 +7,10 @@ import './style.css';
 function TimeDisplay() {
 
     const [time, setTime] = useState({
-        hour: null,
-        minute: null,
-        second: null,
-        tod: null,
+        hour: 12,
+        minute: "00",
+        second: "00",
+        tod: "AM",
     });
 
     const date = new Date()
