@@ -1,6 +1,6 @@
 import TimeDisplay from "./components/TimeDisplay"
 import Notes from "./components/Notes"
-import List from "./components/List"
+import Reminders from "./components/Reminders"
 import { Row, Col } from 'react-bootstrap';
 
 
@@ -15,7 +15,7 @@ function App() {
           <Notes />
         </Col>
         <Col>
-          <List />
+          <Reminders />
         </Col>
       </Row>
     </div>
